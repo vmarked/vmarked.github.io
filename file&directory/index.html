@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
+    <meta name="description" content="vmarked">
+    <meta name="keyword"  content="vmarked">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <title>
         
-        MARK の 空 | Mark&#39;s Blog
+        Python中对文件和目录的常用操作---os模块的基本使用 - vmarked
         
     </title>
 
@@ -48,7 +48,7 @@
             <img src="/img/avatar.png" />
         </div>
         <div class="name">
-            <i>realmark</i>
+            <i>vmarked</i>
         </div>
     </div>
     <div class="contents" id="nav-content">
@@ -59,7 +59,7 @@
                     <span>主页</span>
                 </a>
             </li>
-            <li  class=active >
+            <li >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
                     <span>标签</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    
+</div>
+    
 </div>
 
 
@@ -113,80 +117,113 @@
         
 
 
-<!-- 归档列表 -->
+<div class="post-container">
+    <div class="post-title">
+        Python中对文件和目录的常用操作---os模块的基本使用
+    </div>
 
-<div class="archives-container">
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-07-22 17:56:17</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#python" title="python">python</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>Python中对文件和目录的操作经常用到os模块.下面对其常用功能和实现方法作简单陈述:</p>
+<ul>
+<li><p>获得当前脚本文件的目录路径:</p>
+<p><code>os.getcwd()</code></p>
+</li>
+<li><p>返回指定目录下所包含的所有文件和目录:</p>
+<p><code>os.listdir()</code> <strong><em>例:</em></strong> 返回python目录下的文件 –&gt; <code>os.listdir(&quot;/python/&quot;)</code></p>
+</li>
+<li><p>删除一个文件:</p>
+<p><code>os.remove(filepath)</code></p>
+</li>
+<li><p>删除多个目录(空):</p>
+<p><code>os.remove(r&quot;path&quot;)</code></p>
+</li>
+<li><p>检验路径是否是一个文件:</p>
+<p><code>os.path.isfile(filepath)</code></p>
+</li>
+<li><p>检验路径是否是一个目录:</p>
+<p><code>os.path.isdir(filepath)</code></p>
+</li>
+<li><p>判断是否为绝对路径:</p>
+<p><code>os.path.isabs()</code></p>
+</li>
+<li><p>检验路径是否存在:</p>
+<p><code>os.path.exists()</code> <strong><em>例:</em></strong> 查看python目录下是否存在new目录 –&gt; <code>os.path.exists(r&quot;/python/new&quot;)</code></p>
+</li>
+<li><p>获取路径名:</p>
+<p><code>os.path.dirname(filename)</code></p>
+</li>
+<li><p>获取文件名:</p>
+<p><code>os.path.basename(filepath)</code></p>
+</li>
+<li><p>重命名文件或目录:</p>
+<p><code>os.rename(old, new)</code></p>
+</li>
+<li><p>创建多级目录:</p>
+<p><code>os.makedirs(r&quot;/python/new/test&quot;)</code></p>
+</li>
+<li><p>创建单个目录:</p>
+<p><code>os.mkdir(&quot;test&quot;)</code></p>
+</li>
+<li><p>获取文件属性:</p>
+<p><code>os.stat(file)</code></p>
+</li>
+<li><p>获取文件大小:</p>
+<p><code>os.path.getsize(filename)</code></p>
+</li>
+<li><p>修改文件权限:</p>
+<p><code>os.chmod(file)</code></p>
+</li>
+<li><p>删除目录:</p>
+<p><code>os.rmdir(&quot;dirpath&quot;)</code> <strong><em>(注:只能删除空目录)</em></strong></p>
+</li>
+</ul>
 
-<div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2018">
-                    <span class="tag-text">2018</span>
-                </span>
-    <ul>
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>07-22</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2018/07/22/file&directory/">
-                        <span>
-                            Python中对文件和目录的常用操作---os模块的基本使用
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>07-19</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2018/07/19/learnpython-cn/">
-                        <span>
-                            Learn Python
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>07-17</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2018/07/17/learnmarkdown-cn/">
-                        <span>
-                            Learn Markdown
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>07-16</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2018/07/16/hello-world/">
-                        <span>
-                            Hello World
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-
-    </ul>
+            <div class="donate-container">
+    <div class="donate-button">
+        <button id="donate-button">赞赏</button>
+    </div>
+    <div class="donate-img-container hide" id="donate-img-container">
+        <img id="donate-img" src="" data-src="/img/donate.jpg">
+        <p> 感谢鼓励 </p>
+    </div>
 </div>
+        
+        <div id="comment-container">
+        </div>
+    </div>
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MTA5My8xNzYxOA==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
 
+                if (typeof LivereTower === 'function') { return; }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
 </div>
     </div>
 </div>
@@ -199,7 +236,7 @@
 
         
         <li>
-            <a target="_blank" href="http://weibo.com/2932998041">
+            <a target="_blank" href="http://weibo.com/7205914239">
                             <span class="fa-stack fa-lg">
                                   <i class="iconfont icon-weibo"></i>
                             </span>
@@ -242,7 +279,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
